@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Leave Request</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <div class="dashboard">
+        <h2>Request Leave</h2>
+        <form method="POST">
+            {{ form.hidden_tag() }}
+            {{ form.start_date.label }} {{ form.start_date() }}<br>
+            {{ form.end_date.label }} {{ form.end_date() }}<br>
+            <button type="submit">Submit Request</button>
+        </form>
+        <p><a href="/dashboard">Back to Dashboard</a></p>
+    </div>
+</body>
+</html>
